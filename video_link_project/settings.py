@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'video_app',
-    whitenoise.runserver_nostatic
 ]
 
 MIDDLEWARE = [
@@ -59,7 +58,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'video_link_project.urls'
@@ -82,7 +80,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'video_link_project.wsgi.application'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
