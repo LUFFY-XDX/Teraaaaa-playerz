@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-i9jb2a6let1^mc2#5v=n(9_(yc944a_%1vkoc171)c*)5wv_-)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["tera-vision.onrender.com"]
 
 
 # Application definition
