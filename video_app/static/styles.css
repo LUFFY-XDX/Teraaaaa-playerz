@@ -1,0 +1,106 @@
+/* Background Styling */
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Glowing Neon Text */
+.neon-text {
+    font-size: 3rem;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff1493, 0 0 40px #ff1493;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Flickering Effect */
+@keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff1493; }
+    100% { opacity: 0.8; text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff1493, 0 0 35px #ff1493; }
+}
+
+/* Neon Input Field */
+input {
+    width: 60%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid rgba(0, 255, 255, 0.7);
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    transition: 0.3s ease-in-out;
+}
+
+input:focus {
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+}
+
+/* Neon Button */
+.neon-button {
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.neon-button:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 255, 1), 0 0 40px rgba(0, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+/* 3D Video Box */
+.video-container {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+    border-radius: 12px;
+    transform: perspective(500px) rotateX(5deg);
+}
+
+iframe {
+    width: 80%;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+/* Neon Footer */
+footer {
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.neon-footer {
+    font-size: 1rem;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    input {
+        width: 80%;
+    }
+
+    iframe {
+        width: 90%;
+        height: 250px;
+    }
+}
