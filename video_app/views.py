@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-# Store the last used link
+
 last_link = ""
 
 def index(request):
@@ -16,14 +16,19 @@ def generate_link(request):
     if request.method == "GET":
         user_link = request.GET.get("link", "")
 
-        # Ensure the link is valid
+        
         if len(user_link) >= 25:
             extracted_part = user_link[25:]
-            direct_link = f"https://www.terabox.tech/play.html?url=https%3A%2F%2Fteraboxapp.com%2Fs%2F{extracted_part}"
+            direct_link = f"https://cyberflix-e37h.onrender.com/play/?url=https://www.terabox.com/{extracted_part}"
 
-            # Store the last valid link
+            
             last_link = direct_link
 
             return JsonResponse({"direct_link": direct_link})
 
         return JsonResponse({"error": "Invalid link"}, status=400)
+
+def play_video(request):
+    """Render the custom player.html with the video stream link."""
+    video_url = request.GET.get('url', '')
+    return render(request, 'player.html', {'video_url': video_url})
