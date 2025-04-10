@@ -19,7 +19,7 @@ def generate_link(request):
         
         if len(user_link) >= 25:
             extracted_part = user_link[25:]
-            direct_link = f"https://cyberflix-e37h.onrender.com/play/?url=https://www.terabox.com/{extracted_part}"
+            direct_link = f"https://www.terabox.tech/play.html?url=https://www.terabox.com/{extracted_part}"
 
             
             last_link = direct_link
